@@ -19,7 +19,7 @@ Required:
 
 - User can compose a new tweet by tapping on a compose button.
 
-- User can tap on a tweet to view it, with controls to retweet, favorite, and reply. (Partially complete as controls do not working..will fix). 
+- User can tap on a tweet to view it, with controls to retweet, favorite, and reply. (retweet control implemented. but not favorite and reply..will fix). 
 
 
 <img src="https://github.com/sdatla/Twitter-/blob/master/hw3.gif" />
