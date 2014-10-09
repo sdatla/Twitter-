@@ -204,7 +204,7 @@
     UIImage *favBtnImage = [UIImage imageNamed:@"star.png"];
     [cell.favoriteButton setImage:favBtnImage forState:UIControlStateNormal];
 //
-//    cell.tweetTextLabel.text = @"This is going to be a really long string to test some stuff to check if autolayout is working as expected or what because this is really getting on my nerves arghhhhh hope this works it better work please work ahhhhh";
+//    
 //    
 //    cell.timeLabel.text = @"4h";
 //    cell.userName.text = @"Arnold Schwarznager";
