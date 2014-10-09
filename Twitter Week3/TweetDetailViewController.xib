@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4511" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3745"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TweetDetailViewController">
@@ -43,24 +43,27 @@
                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBM-t0-h9N">
-                    <rect key="frame" x="20" y="267" width="30" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBM-t0-h9N">
+                    <rect key="frame" x="20" y="168" width="16" height="22"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal">
+                    <state key="normal" image="reply.png" backgroundImage="reply.png">
+                        <color key="titleColor" white="0.29885962700000002" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="378-QH-3e1">
-                    <rect key="frame" x="78" y="267" width="30" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="378-QH-3e1">
+                    <rect key="frame" x="78" y="173" width="16" height="12"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal">
+                    <state key="normal" image="retweet.png" backgroundImage="retweet.png">
+                        <color key="titleColor" white="0.29885962700000002" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hxr-5a-mKU">
-                    <rect key="frame" x="140" y="267" width="30" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hxr-5a-mKU">
+                    <rect key="frame" x="140" y="170" width="16" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal">
+                    <state key="normal" image="star.png" backgroundImage="star.png">
+                        <color key="titleColor" white="0.29885962700000002" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
@@ -71,7 +74,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBU-5y-Hlw">
-                    <rect key="frame" x="20" y="231" width="42" height="21"/>
+                    <rect key="frame" x="20" y="140" width="289" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
@@ -84,7 +87,10 @@
                 <constraint firstItem="6da-gW-Jmt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="BA2-nc-v0n"/>
                 <constraint firstItem="jPg-DH-sad" firstAttribute="top" secondItem="6da-gW-Jmt" secondAttribute="bottom" constant="18" id="Nbu-mU-lEH"/>
                 <constraint firstItem="CN8-Qw-WsY" firstAttribute="leading" secondItem="6da-gW-Jmt" secondAttribute="trailing" constant="8" id="Stn-cm-11N"/>
-                <constraint firstItem="nBU-5y-Hlw" firstAttribute="top" secondItem="jPg-DH-sad" secondAttribute="bottom" constant="97" id="YI8-Pi-Aok"/>
+                <constraint firstItem="EBM-t0-h9N" firstAttribute="top" secondItem="nBU-5y-Hlw" secondAttribute="bottom" constant="7" id="U3K-kx-Kra"/>
+                <constraint firstItem="378-QH-3e1" firstAttribute="top" secondItem="nBU-5y-Hlw" secondAttribute="bottom" constant="12" id="VGF-Fq-Dm7"/>
+                <constraint firstItem="Hxr-5a-mKU" firstAttribute="top" secondItem="nBU-5y-Hlw" secondAttribute="bottom" constant="9" id="WC7-gz-CMr"/>
+                <constraint firstItem="nBU-5y-Hlw" firstAttribute="top" secondItem="jPg-DH-sad" secondAttribute="bottom" constant="6" id="YI8-Pi-Aok"/>
                 <constraint firstAttribute="trailing" secondItem="jPg-DH-sad" secondAttribute="trailing" constant="20" id="gLF-sF-fTN"/>
                 <constraint firstItem="6da-gW-Jmt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="jcX-VU-0gA"/>
             </constraints>
@@ -92,4 +98,9 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
+    <resources>
+        <image name="reply.png" width="16" height="16"/>
+        <image name="retweet.png" width="16" height="10"/>
+        <image name="star.png" width="16" height="16"/>
+    </resources>
 </document>

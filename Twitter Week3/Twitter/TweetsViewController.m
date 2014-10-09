@@ -187,9 +187,7 @@
    
            cell.timeLabel.text = [Tweet retrivePostTime:tweet.createdAt];
             cell.userName.text = tweet.author.name;
-    
-           //cell.handleLabel.text =
-           //cell.retweetedByLabel =
+
    
             NSString *handle = [NSString stringWithFormat:@"@%@", tweet.author.screenname];
             cell.handleLabel.text =  handle;
@@ -203,12 +201,7 @@
    
     UIImage *favBtnImage = [UIImage imageNamed:@"star.png"];
     [cell.favoriteButton setImage:favBtnImage forState:UIControlStateNormal];
-//
-//    
-//    
-//    cell.timeLabel.text = @"4h";
-//    cell.userName.text = @"Arnold Schwarznager";
-//    cell.handleLabel.text =  @"@blahblahblah";
+
 
 }
 

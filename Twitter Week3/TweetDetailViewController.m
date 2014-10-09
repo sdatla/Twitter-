@@ -50,7 +50,15 @@
     NSLog(@"this is the author name %@",self.tweetObj.author.name);
     self.userName.text = self.tweetObj.author.name;
     self.tweettext.text = self.tweetObj.text;
-    self.timeLabel.text = [Tweet retrivePostTime:self.tweetObj.createdAt];
+    
+    
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    [format setDateFormat:@"MM/d/yyyy hh:mm a"];
+    
+    NSString *dateString = [format stringFromDate:self.tweetObj.createdAt];
+    
+    self.timeLabel.text = dateString;
+    
     NSString *handle = [NSString stringWithFormat:@"@%@", self.tweetObj.author.screenname];
     self.handleLabel.text = handle;
     
