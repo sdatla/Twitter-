@@ -99,4 +99,43 @@ NSString * const kTwitterBaseUrl = @"https://api.twitter.com";
     }];
 }
 
+-(void)addReplyToTweet:(Tweet *)updateTweet text:(NSString *)text{
+    
+    NSString *str = [NSString stringWithFormat:@"@%@ %@", updateTweet.author.screenname, text];
+
+    [self POST:@"1.1/statuses/update.json" parameters:@{@"status":str, @"in_reply_to_status_id": updateTweet.tweetid} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSLog(@"Replied to tweet");
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error replying to tweet %@", operation.error);
+        
+    }];
+}
+
+-(void)doFavorite:(Tweet *)updateTweet{
+    
+    
+    [self POST:@"1.1/favorites/create.json" parameters:@{@"id":updateTweet.tweetid} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSLog(@"Favorited");
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error favoriting %@", operation.error);
+        
+    }];
+}
+
+
+-(void)doRetweet:(NSString *)tweetId{
+    NSString *postData = [NSString stringWithFormat:@"1.1/statuses/retweet/%@.json", tweetId];
+    [self POST:postData parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSLog(@"retweeted");
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error retweeting");
+        
+    }];
+}
 @end

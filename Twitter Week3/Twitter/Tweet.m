@@ -16,6 +16,8 @@
     {
         self.author = [[User alloc] initWithDictionary:dictionary[@"user"]];
         self.text = dictionary[@"text"];
+        self.favorited = dictionary[@"favorited"];
+        self.tweetid = dictionary[@"id_str"];
         NSString *createdAtString = dictionary[@"created_at"];
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         formatter.dateFormat = @"EEE MMM d HH:mm:ss ZZZZ yyyy";
@@ -38,11 +40,6 @@
 
 +(NSString*)retrivePostTime:(NSDate*)userPostDate{
    
-//    NSDateFormatter *df = [[NSDateFormatter alloc] init];
-//    [df setDateFormat:@"eee MMM dd HH:mm:ss ZZZZ yyyy"];
-//    NSDate *userPostDate = [df dateFromString:postDate];
-    
-    
     NSDate *currentDate = [NSDate date];
     NSTimeInterval distanceBetweenDates = [currentDate timeIntervalSinceDate:userPostDate];
     

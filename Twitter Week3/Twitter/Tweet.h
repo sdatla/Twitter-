@@ -11,9 +11,11 @@
 
 @interface Tweet : NSObject
 
+@property (nonatomic, strong) NSString *tweetid;
 @property (nonatomic, strong) NSString *text;
 @property (nonatomic, strong) NSDate *createdAt;
 @property (nonatomic, strong) User *author;
+@property (nonatomic, strong) NSString *favorited;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 

@@ -19,8 +19,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UIButton *replyButton;
 @property (weak, nonatomic) IBOutlet UIButton *retweetButton;
-@property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
-@property (weak, nonatomic) Tweet *tweetObj;
+@property (strong, nonatomic) IBOutlet UIButton *favoriteButton;
+@property (strong, nonatomic) Tweet *tweetObj;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil tweet:(Tweet *)tweetObj;
+- (IBAction)retweetAction:(id)sender;
+- (IBAction)favoriteAction:(id)sender;
+- (IBAction)replyAction:(id)sender;
 
+-(void)popController;
 @end

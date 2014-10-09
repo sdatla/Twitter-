@@ -91,8 +91,7 @@
     // Do any additional setup after loading the view from its nib.
     NSArray *keys = [NSArray arrayWithObjects:@"timeline", nil];
     NSArray *objects = [NSArray arrayWithObjects:@"20", nil];
-    NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:objects
-                                                           forKeys:keys];
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
     
     [[TwitterClient sharedInstance] homeTimelineWithParams:dictionary completion:^(NSArray *tweets, NSError *error) {
         if(error == nil)
@@ -128,7 +127,7 @@
     
     NSLog(@"Composing tweet");
     NewTweetViewController *ntw = [[NewTweetViewController alloc] init];
-    [ntw setCallback:self selector:@selector(addTweet)];
+    [ntw setCallback:self];
     [self.navigationController pushViewController:ntw animated:YES];
 }
 
@@ -200,7 +199,15 @@
     [cell.retweetButton setImage:retweetBtnImage forState:UIControlStateNormal];
    
     UIImage *favBtnImage = [UIImage imageNamed:@"star.png"];
-    [cell.favoriteButton setImage:favBtnImage forState:UIControlStateNormal];
+    UIImage *favBtnImageSelected = [UIImage imageNamed:@"star-selected.png"];
+    if([tweet.favorited intValue] == 0)
+    {
+        [cell.favoriteButton setImage:favBtnImage forState:UIControlStateNormal];
+    }
+    else
+    {
+        [cell.favoriteButton setImage:favBtnImageSelected forState:UIControlStateNormal];
+    }
 
 
 }

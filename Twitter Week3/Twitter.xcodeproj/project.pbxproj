@@ -32,7 +32,6 @@
 		2031B2E019E11823001B9D19 /* TweetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2031B2DE19E11823001B9D19 /* TweetsViewController.m */; };
 		2031B2E119E11823001B9D19 /* TweetsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2031B2DF19E11823001B9D19 /* TweetsViewController.xib */; };
 		2031B2ED19E3C80F001B9D19 /* TweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2031B2EB19E3C80F001B9D19 /* TweetCell.m */; };
-		2031B2EE19E3C80F001B9D19 /* TweetCell_copy.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2031B2EC19E3C80F001B9D19 /* TweetCell_copy.xib */; };
 		2031B2F219E3D3A3001B9D19 /* pic.png in Resources */ = {isa = PBXBuildFile; fileRef = 2031B2F119E3D3A3001B9D19 /* pic.png */; };
 		2031B30019E4E47D001B9D19 /* TweetDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2031B2FE19E4E47D001B9D19 /* TweetDetailViewController.m */; };
 		2031B30119E4E47D001B9D19 /* TweetDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2031B2FF19E4E47D001B9D19 /* TweetDetailViewController.xib */; };
@@ -87,7 +86,6 @@
 		2031B2DF19E11823001B9D19 /* TweetsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetsViewController.xib; sourceTree = "<group>"; };
 		2031B2EA19E3C80F001B9D19 /* TweetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetCell.h; sourceTree = "<group>"; };
 		2031B2EB19E3C80F001B9D19 /* TweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetCell.m; sourceTree = "<group>"; };
-		2031B2EC19E3C80F001B9D19 /* TweetCell_copy.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetCell_copy.xib; sourceTree = "<group>"; };
 		2031B2F119E3D3A3001B9D19 /* pic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic.png; sourceTree = SOURCE_ROOT; };
 		2031B2FD19E4E47D001B9D19 /* TweetDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TweetDetailViewController.h; path = ../TweetDetailViewController.h; sourceTree = "<group>"; };
 		2031B2FE19E4E47D001B9D19 /* TweetDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TweetDetailViewController.m; path = ../TweetDetailViewController.m; sourceTree = "<group>"; };
@@ -159,35 +157,15 @@
 		2031B29919E0F351001B9D19 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				2067C60219E658DB006431A1 /* TableCells */,
+				2067C60119E658A6006431A1 /* ViewControllers */,
 				2031B2D619E0FE9B001B9D19 /* APIs */,
 				2031B2D519E0FE96001B9D19 /* Models */,
 				2031B2A219E0F351001B9D19 /* AppDelegate.h */,
 				2031B2A319E0F351001B9D19 /* AppDelegate.m */,
+				2067C60019E6587D006431A1 /* Images */,
 				2031B2AB19E0F351001B9D19 /* Images.xcassets */,
 				2031B29A19E0F351001B9D19 /* Supporting Files */,
-				2031B2CD19E0F4CD001B9D19 /* LoginViewController.h */,
-				2031B2CE19E0F4CD001B9D19 /* LoginViewController.m */,
-				2031B2CF19E0F4CD001B9D19 /* LoginViewController.xib */,
-				2031B2D219E0F55A001B9D19 /* TwitterClient.h */,
-				2031B2D319E0F55A001B9D19 /* TwitterClient.m */,
-				2031B2DD19E11823001B9D19 /* TweetsViewController.h */,
-				2031B2DE19E11823001B9D19 /* TweetsViewController.m */,
-				2031B2DF19E11823001B9D19 /* TweetsViewController.xib */,
-				2031B2EA19E3C80F001B9D19 /* TweetCell.h */,
-				2031B2EB19E3C80F001B9D19 /* TweetCell.m */,
-				026DFBAE19E5D12200E1D6C4 /* TweetCell.xib */,
-				2031B2EC19E3C80F001B9D19 /* TweetCell_copy.xib */,
-				2031B2FD19E4E47D001B9D19 /* TweetDetailViewController.h */,
-				2031B2FE19E4E47D001B9D19 /* TweetDetailViewController.m */,
-				2031B2FF19E4E47D001B9D19 /* TweetDetailViewController.xib */,
-				2031B30219E4F432001B9D19 /* NewTweetViewController.h */,
-				2031B30319E4F432001B9D19 /* NewTweetViewController.m */,
-				2031B30419E4F432001B9D19 /* NewTweetViewController.xib */,
-				2031B2F119E3D3A3001B9D19 /* pic.png */,
-				026DFBAC19E5C4FD00E1D6C4 /* star.png */,
-				2017FF7019E6404B004F9641 /* retweet.png */,
-				026DFBA619E5C4E400E1D6C4 /* reply.png */,
-				026DFBAA19E5C4F900E1D6C4 /* star-selected.png */,
 			);
 			path = Twitter;
 			sourceTree = "<group>";
@@ -235,8 +213,51 @@
 		2031B2D619E0FE9B001B9D19 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
+				2031B2D219E0F55A001B9D19 /* TwitterClient.h */,
+				2031B2D319E0F55A001B9D19 /* TwitterClient.m */,
 			);
 			name = APIs;
+			sourceTree = "<group>";
+		};
+		2067C60019E6587D006431A1 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2031B2F119E3D3A3001B9D19 /* pic.png */,
+				026DFBAC19E5C4FD00E1D6C4 /* star.png */,
+				2017FF7019E6404B004F9641 /* retweet.png */,
+				026DFBA619E5C4E400E1D6C4 /* reply.png */,
+				026DFBAA19E5C4F900E1D6C4 /* star-selected.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		2067C60119E658A6006431A1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2031B2FD19E4E47D001B9D19 /* TweetDetailViewController.h */,
+				2031B2FE19E4E47D001B9D19 /* TweetDetailViewController.m */,
+				2031B2FF19E4E47D001B9D19 /* TweetDetailViewController.xib */,
+				2031B30219E4F432001B9D19 /* NewTweetViewController.h */,
+				2031B30319E4F432001B9D19 /* NewTweetViewController.m */,
+				2031B30419E4F432001B9D19 /* NewTweetViewController.xib */,
+				2031B2CD19E0F4CD001B9D19 /* LoginViewController.h */,
+				2031B2CE19E0F4CD001B9D19 /* LoginViewController.m */,
+				2031B2CF19E0F4CD001B9D19 /* LoginViewController.xib */,
+				2031B2DD19E11823001B9D19 /* TweetsViewController.h */,
+				2031B2DE19E11823001B9D19 /* TweetsViewController.m */,
+				2031B2DF19E11823001B9D19 /* TweetsViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2067C60219E658DB006431A1 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				2031B2EA19E3C80F001B9D19 /* TweetCell.h */,
+				2031B2EB19E3C80F001B9D19 /* TweetCell.m */,
+				026DFBAE19E5D12200E1D6C4 /* TweetCell.xib */,
+			);
+			name = TableCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,7 +346,6 @@
 				026DFBAF19E5D12200E1D6C4 /* TweetCell.xib in Resources */,
 				2031B2F219E3D3A3001B9D19 /* pic.png in Resources */,
 				2031B2E119E11823001B9D19 /* TweetsViewController.xib in Resources */,
-				2031B2EE19E3C80F001B9D19 /* TweetCell_copy.xib in Resources */,
 				2031B2AC19E0F351001B9D19 /* Images.xcassets in Resources */,
 				2031B30619E4F432001B9D19 /* NewTweetViewController.xib in Resources */,
 				2031B29E19E0F351001B9D19 /* InfoPlist.strings in Resources */,

@@ -8,6 +8,7 @@
 
 #import "TweetDetailViewController.h"
 #import "Tweet.h"
+#import "TwitterClient.h"
 #import  "NewTweetViewController.h"
 
 @interface TweetDetailViewController ()
@@ -34,10 +35,18 @@
     return self;
 }
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
+    if([self.tweetObj.favorited intValue] == 1)
+    {
+         UIImage *favBtnImage = [UIImage imageNamed:@"star-selected.png"];
+         [self.favoriteButton setBackgroundImage:favBtnImage forState:UIControlStateNormal];
+    }
+
     UIColor *blue = [UIColor colorWithRed:102.0/255 green:178.0/255 blue:255.0/255 alpha:1.00];
     self.navigationController.navigationBar.barTintColor = blue;
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
@@ -95,13 +104,39 @@
 
 -(IBAction)onReply{
     NSLog(@"Replying to tweet");
-    [self.navigationController pushViewController:[[NewTweetViewController alloc] init] animated:YES];
+    NewTweetViewController *ntw = [[NewTweetViewController alloc] init];
+    [ntw setCallback:self tweet:self.tweetObj ];
+    [self.navigationController pushViewController:ntw animated:YES];
     
 }
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)retweetAction:(id)sender{
+    
+    [[TwitterClient sharedInstance] doRetweet:self.tweetObj.tweetid];
+}
+
+- (IBAction)favoriteAction:(id)sender {
+    UIImage *favBtnImage = [UIImage imageNamed:@"star-selected.png"];
+    
+    if([self.tweetObj.favorited intValue] == 0)
+    {
+        [self.favoriteButton setBackgroundImage:favBtnImage forState:UIControlStateNormal];
+    [[TwitterClient sharedInstance] doFavorite:self.tweetObj];
+    }
+    
+    
+}
+
+- (IBAction)replyAction:(id)sender {
+    [self onReply];
+}
+
+-(void)popController{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

@@ -9,6 +9,8 @@
 #import "NewTweetViewController.h"
 #import "User.h"
 #import "TwitterClient.h"
+#import "TweetsViewController.h"
+
 @interface NewTweetViewController ()
 
 @end
@@ -63,9 +65,21 @@
 
 -(IBAction)onTweet{
     NSLog(@"Going to tweet");
-    [[TwitterClient sharedInstance] addTweetToTimeline:self.tweet.text];
-    [self.navigationController popViewControllerAnimated:YES];
+    if([self.callbackVC.nibName isEqualToString:@"TweetsViewController"])
+    {
+        [[TwitterClient sharedInstance] addTweetToTimeline:self.tweet.text];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    if([self.callbackVC.nibName isEqualToString:@"TweetDetailViewController"])
+    {
     
+        NSLog(@"herie through TweetDetailViewController");
+
+        [[TwitterClient sharedInstance] addReplyToTweet:self.tweetObj text:self.tweet.text];
+         [self.navigationController popViewControllerAnimated:YES];
+    }
+
+   
     
 }
 -(IBAction)onCancel{
@@ -78,11 +92,18 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)setCallback:(UIViewController *)vc selector:(SEL)selector {
+-(void)setCallback:(UIViewController *)vc{
     self.callbackVC = vc;
-   // self.callbackMethodForAddTweet = selector;
+    
+   
     
 }
 
+-(void)setCallback:(UIViewController *)vc tweet:(Tweet *)tweet{
+    self.callbackVC = vc;
+    self.tweetObj = tweet;
+    
+    NSLog(@"This is the tweet obj %@", self.tweetObj.text);
+}
 
 @end

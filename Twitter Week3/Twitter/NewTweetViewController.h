@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Tweet.h"
 
 @interface NewTweetViewController : UIViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *userImage;
@@ -15,6 +16,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *tweetInputText;
 @property (weak, nonatomic) IBOutlet UITextView *tweet;
 @property (strong, nonatomic) UIViewController *callbackVC;
+@property (strong, nonatomic) NSString *methodName;
 @property (assign, nonatomic) SEL *callbackMethodForAddTweet;
--(void)setCallback:(UIViewController *)vc selector:(SEL)selector;
+-(void)setCallback:(UIViewController *)vc;
+-(void)setCallback:(UIViewController *)vc tweet:(Tweet *)tweet;
+@property (strong, nonatomic) Tweet *tweetObj;
 @end

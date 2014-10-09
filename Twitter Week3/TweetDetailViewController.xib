@@ -50,6 +50,9 @@
                         <color key="titleColor" white="0.29885962700000002" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="replyAction:" destination="-1" eventType="touchDown" id="Pn9-4e-q0f"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="378-QH-3e1">
                     <rect key="frame" x="78" y="173" width="16" height="12"/>
@@ -58,6 +61,9 @@
                         <color key="titleColor" white="0.29885962700000002" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="retweetAction:" destination="-1" eventType="touchDown" id="U9C-01-YFX"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hxr-5a-mKU">
                     <rect key="frame" x="140" y="170" width="16" height="17"/>
@@ -66,6 +72,9 @@
                         <color key="titleColor" white="0.29885962700000002" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="favoriteAction:" destination="-1" eventType="touchDown" id="g8I-yD-eht"/>
+                    </connections>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="jPg-DH-sad">
                     <rect key="frame" x="20" y="113" width="280" height="21"/>
